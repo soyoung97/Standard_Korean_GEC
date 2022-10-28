@@ -1,0 +1,6 @@
+--2021-05-06 20:48:03--  https://savvihub-data-apne2.s3.ap-northeast-2.amazonaws.com/htluicuumhds/experiment/m91ngoiobyfm/output/native/generation/epoch3/val/reference_0.24676364660263062.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256
+Resolving savvihub-data-apne2.s3.ap-northeast-2.amazonaws.com (savvihub-data-apne2.s3.ap-northeast-2.amazonaws.com)... 52.219.148.11
+접속 savvihub-data-apne2.s3.ap-northeast-2.amazonaws.com (savvihub-data-apne2.s3.ap-northeast-2.amazonaws.com)|52.219.148.11|:443... 접속됨.
+HTTP request sent, awaiting response... 400 Bad Request
+2021-05-06 20:48:03 ERROR 400: Bad Request.
+

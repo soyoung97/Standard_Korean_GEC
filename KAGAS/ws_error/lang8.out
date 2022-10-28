@@ -1,0 +1,7 @@
+lang8
+Total: 218678, wrong: 471
+0.21538517820722705%
+52	13!=12	언제 우리는 대학교에 도착했어요 마리는 써면서 책을 있었어요 그리고 난 내 한국어 숙제가 있었어요	[언제 (MAG),   (WS), 우리 (NP), 는 (JX),   (WS), 대학교 (NNG), 에 (JKM),   (WS), 도착 (NNG), 하 (XSV), 었 (EPT), 어요 (EFN),   (WS), 마리 (NNB), 는 (JX),   (WS), 써 (VV), 면서 (ECE),   (WS), 책 (NNG), 을 (JKO),   (WS), 있었 (VV), 어요 (EFN),   (WS), 그리고 (MAC),   (WS), 나 (NP), 는 (JX), 내 (NP),   (WS), 한국어 (NNG),   (WS), 숙제 (NNG), 가 (JKS),   (WS), 있 (VV), 었 (EPT), 어요 (EFN)]
+52	15 != 14	얼마 지나지 않아 우리는 대학교에 도착했어요 마리는 쓰면서 책을 있었어요 그리고 난 내 한국어 숙제가 있었어요	[얼마 (NNG),   (WS), 지나 (VV), 지 (ECD),   (WS), 않 (VXV), 아 (ECD),   (WS), 우리 (NP), 는 (JX),   (WS), 대학교 (NNG), 에 (JKM),   (WS), 도착 (NNG), 하 (XSV), 었 (EPT), 어요 (EFN),   (WS), 마리 (NNB), 는 (JX),   (WS), 쓰 (VV), 면서 (ECE),   (WS), 책 (NNG), 을 (JKO),   (WS), 있었 (VV), 어요 (EFN),   (WS), 그리고 (MAC),   (WS), 나 (NP), 는 (JX), 내 (NP),   (WS), 한국어 (NNG),   (WS), 숙제 (NNG), 가 (JKS),   (WS), 있 (VV), 었 (EPT), 어요 (EFN)]
+572	5 != 4	지금은 계속 이런 나날들을 보내는게 싫다	[지금 (NNG), 은 (JX),   (WS), 계속 (MAG),   (WS), 이러 (VV), ㄴ (ETD),   (WS), 나날 (NNG), 들 (XSN), 을 (JKO),   (WS), 보내 (VV), 는 (ETD), 것 (NNB), 이 (JKS), 싫 (VA), 다 (EFN)]
+1049	7 != 6	난 너무 많이 먹어서 배 불러 죽을 것같아요	[나 (NP), 는 (JX), 너무 (MAG),   (WS), 많이 (MAG),   (WS), 먹 (VV), 어서 (ECD),   (WS), 배 (NNG),   (WS), 불르 (VV), 어 (ECS),   (WS), 죽 (VV), 을 (ETD),   

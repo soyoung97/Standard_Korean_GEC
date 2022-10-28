@@ -1,0 +1,20 @@
+boto3 <= 1.15.18
+soylemma==0.2.0
+soynlp==0.0.493
+konlpy==0.5.2
+jamo==0.4.1
+gluonnlp==0.10.0
+pandas==1.1.5
+sentencepiece==0.1.94
+pathlib==1.0.1
+tqdm==4.54.1
+transformers==4.8.1
+pytorch-lightning==1.1.0
+torchtext==0.8.1
+torch==1.7.1
+sklearn==0.0
+mxnet >= 1.4.0, <=1.7.0.post2
+spacy==3.0.5
+streamlit==0.72.0
+cyhunspell==2.0.2
+tweepy==3.10.0

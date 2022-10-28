@@ -1,0 +1,8 @@
+native
+Total: 35122, wrong: 41
+0.11673594897784864%
+133	10!=9	저녁밥을 먹고 배가 부르고 보니 저녁 약속이 있었다는 게 생각났다 .	[저녁밥 (NNG), 을 (JKO),   (WS), 먹 (VV), 고 (ECE),   (WS), 배 (NNG), 가 (JKS),   (WS), 부르 (VV), 고 (ECE),   (WS), 보 (VXV), 니 (ECD),   (WS), 저녁 (NNG),   (WS), 약속 (NNG), 이 (JKS),   (WS), 있 (VV), 었 (EPT), 다는 (ETD),   (WS), 것 (NNB), 이 (JKS), 생각나 (VV), 었 (EPT), 다 (EFN),   (WS), . (SF)]
+133	11 != 10	저녁 밥을 먹고 배가 부르고 보니 저녁 약속이 있었다는 게 생각났다 .	[저녁 (NNG),   (WS), 밥 (NNG), 을 (JKO),   (WS), 먹 (VV), 고 (ECE),   (WS), 배 (NNG), 가 (JKS),   (WS), 부르 (VV), 고 (ECE),   (WS), 보 (VXV), 니 (ECD),   (WS), 저녁 (NNG),   (WS), 약속 (NNG), 이 (JKS),   (WS), 있 (VV), 었 (EPT), 다는 (ETD),   (WS), 것 (NNB), 이 (JKS), 생각나 (VV), 었 (EPT), 다 (EFN),   (WS), . (SF)]
+833	4 != 3	그는 외국인이 아닐 껄 ?	[그 (NP), 는 (JX),   (WS), 외국인 (NNG), 이 (JKS),   (WS), 아니 (VV), ㄹ (ETD), 것 (NNB), 을 (JKO),   (WS), ? (SF)]
+1599	5 != 4	줄리아씨를 안 만날 껏을 알아요 .	[줄 (NNG), 리 (NNG), 아씨 (NNG), 를 (JKO),   (WS), 안 (MAG),   (WS), 만나 (VV), ㄹ (ETD), 것 (NNB), 을 (JKO),   (WS), 알 (VV), 아요 (EFN),   (WS), . (SF)]
+2415	6!=5	점심으로 먹은 게 소화가 안 돼요 .	[점심 (NNG), 으로 (JKM),   (WS), 먹 (VV), 은 (ETD),   (WS), 것 (NNB), 이 (JKS), 소화 (NNG), 가 (JKS),   (WS), 안 (MAG),   (WS), 되 (VV), 어요 (EFN),   (WS), . (SF)]
