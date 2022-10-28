@@ -1,5 +1,6 @@
 This is the official github repository for the paper: [towards standardizing Korean Grammatical Error Correction: Datasets and Annotation](https://arxiv.org/abs/2210.14389)
 
+Code maintained by: [Soyoung Yoon](https://soyoung97.github.io/profile/)
 
 For running the code, consider working on inside the docker image: `msyoon8/korean_gec:minimal` which is uploaded in docker hub.
 The command I used is below:
