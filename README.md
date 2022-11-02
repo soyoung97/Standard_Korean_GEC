@@ -1,6 +1,9 @@
-This is the official github repository for the paper: [towards standardizing Korean Grammatical Error Correction: Datasets and Annotation](https://arxiv.org/abs/2210.14389)
+This is the official github repository for the paper: [Towards Standardizing Korean Grammatical Error Correction: Datasets and Annotation](https://arxiv.org/abs/2210.14389)
 
 Code maintained by: [Soyoung Yoon](https://soyoung97.github.io/profile/)
+
+**  2022.11 Update: We are planning to add a **demo page** which you can simply inference by our pretrained model. Please stay tuned! **
+
 
 For running the code, consider working on inside the docker image: `msyoon8/korean_gec:minimal` which is uploaded in docker hub.
 The command I used is below:
@@ -10,7 +13,7 @@ docker exec -it [docker container name] \bin\bash # work on it interactively ins
 ```
 `msyoon8/korean_gec:minimal` has minimal settings - you need to clone this repository at /home and run `pip3 install -r requirements.txt`
 
-# 0.Install dependencies
+# 0. Install dependencies
 ```
 pip3 install -r requirements.txt
 ```
@@ -196,7 +199,47 @@ If you want to classify currently "NA" typed edits, you should edit `classify_ou
 Currently, all error types except "WS"(Word Space) are classified here. Since word space edit needs merging, it is
 specially handled beforehand at `merge_ws` from `scripts/align_text_korean.py`.
 
-# Contact
+
+# 4. General
+
+## Contact
 
 If you have any questions, suggestions or bug reports, you can contact the authors at:
 soyoungyoon at kaist.ac.kr
+
+## License
+Our code follows the modified MIT License, followed by [KoBART](https://github.com/SKT-AI/KoBART/blob/main/LICENSE) and [ERRANT](https://github.com/chrisjbryant/errant/blob/master/LICENSE.md).
+```
+Modified MIT License
+
+Software Copyright (c) 2022 Soyoung Yoon
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice need not be included
+with content created by the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## Citation
+If you find this useful, please consider citing our paper:
+```
+@article{yoon2022towards,
+  title={Towards Standardizing Korean Grammatical Error Correction: Datasets and Annotation},
+  author={Yoon, Soyoung and Park, Sungjoon and Kim, Gyuwan and Cho, Junhee and Park, Kihyo and Kim, Gyu Tae and Seo, Minjoon and Oh, Alice},
+  journal={arXiv preprint arXiv:2210.14389},
+  year={2022}
+}
+```  
