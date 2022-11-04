@@ -80,13 +80,15 @@ repository](https://github.com/kimgyu/korean-learner).
 
 # 2. How to run the models
 **Disclaimer**: The original model code was implemented years ago,
-so we implemented a new, easier one that is more easily accessible.
+so we implemented a new, easier one that is more easily accessible. (WIP)
 
 We are also planning to open an easy-accessible version of the pre-trained model by our dataset.
 To reproduce the original experiments, please refer to [this spreadsheet](https://docs.google.com/spreadsheets/d/1II_BB10YPijp1Rgw3ZgQElvv6pw7xINOdTpJbAPz484/edit?usp=sharing).
 It contains all the information about model checkpoints(link to google drive), command logs, and so on.
 
-If you want to reproduce it youserlf, look at the codes under `src/KoBART_GEC`. Please use the docker image `msyoon8/default:gec` to run the original code.
+
+(Deprecated)
+If you want to reproduce the original code and train them, please look at the codes under `src/KoBART_GEC`. Please use the docker image `msyoon8/default:gec` to run the original(deprecated) code. Please note that the original code is no longer maintained. Tips: You don't need to install savvihub and g2pk to run the training. (You can just delete the import part and related code)
 
 Kobart transformers are referenced by [this repository](https://github.com/hyunwoongko/kobart-transformers).
 ## Prepare dataset
