@@ -3,7 +3,7 @@ This is the official github repository for the paper: [Towards Standardizing Kor
 Code maintained by: [Soyoung Yoon](https://soyoung97.github.io/profile/)
 
 **  2022.11 Update: We are planning to add a **demo page** which you can simply inference by our pretrained model. Please stay tuned! **
-
+**  2023.5.3 Update: Our paper is accepted to ACL 2023 (main)!! **
 
 For running the code, consider working on inside the docker image: `msyoon8/korean_gec:minimal` which is uploaded in docker hub.
 The command I used is below:
