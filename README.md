@@ -2,17 +2,44 @@ This is the official github repository for the paper: [Towards Standardizing Kor
 
 Code maintained by: [Soyoung Yoon](https://soyoung97.github.io/profile/)
 
-**  2022.11 Update: We are planning to add a **demo page** which you can simply inference by our pretrained model. Please stay tuned! **
+**2022.11 Update: We are planning to add a **demo page** which you can simply inference by our pretrained model. Please stay tuned!**
 
-**  2023.5.3 Update: Our paper is accepted to ACL 2023 (main)!! **
+**2023.5.3 Update: Our paper is accepted to ACL 2023 (main)!!**
 
-For running the code, consider working on inside the docker image: `msyoon8/korean_gec:minimal` which is uploaded in docker hub.
-The command I used is below:
+**2023.6.6 Update: Demo is launched!!** :rocket: [link](https://huggingface.co/spaces/Soyoung97/gec-korean-demo)
+
+### Links
+
+Dataset request form: [link](https://forms.gle/kF9pvJbLGvnh8ZnQ6)
+
+Demo: [link](https://huggingface.co/spaces/Soyoung97/gec-korean-demo)
+
+Colab demo: [link](https://colab.research.google.com/drive/1CL__3CpkhBzxWUbvsQmPTQWWu1cWmJHa?usp=sharing)
+
+Full list of model checkpoint files: [link](https://docs.google.com/spreadsheets/d/1II_BB10YPijp1Rgw3ZgQElvv6pw7xINOdTpJbAPz484/edit?usp=sharing)
+
+### Sample code
 ```
-docker run -it -d --device /dev/nvidia0:/dev/nvidia0 --device /dev/nvidiactl:/dev/nvidiactl --device /dev/nvidia-uvm:/dev/nvidia-uvm --ipc=host --gpus all -v msyoon8/korean_gec:minimal /bin/bash
-docker exec -it [docker container name] \bin\bash # work on it interactively inside
+import torch
+from transformers import PreTrainedTokenizerFast
+from transformers import BartForConditionalGeneration
+tokenizer = PreTrainedTokenizerFast.from_pretrained('Soyoung97/gec_kr')
+model = BartForConditionalGeneration.from_pretrained('Soyoung97/gec_kr')
+text = '한국어는어렵다.'
+raw_input_ids = tokenizer.encode(text)
+input_ids = [tokenizer.bos_token_id] + raw_input_ids + [tokenizer.eos_token_id]
+corrected_ids = model.generate(torch.tensor([input_ids]),
+                                max_length=128,
+                                eos_token_id=1, num_beams=4,
+                                early_stopping=True, repetition_penalty=2.0)
+output_text = tokenizer.decode(corrected_ids.squeeze().tolist(), skip_special_tokens=True)
+output_text
+>>> '한국어는 어렵다.'
 ```
-`msyoon8/korean_gec:minimal` has minimal settings - you need to clone this repository at /home and run `pip3 install -r requirements.txt`
+
+Special thanks to the [KoBART-summarization repository](https://huggingface.co/gogamza/kobart-summarization) (referenced from it)
+
+
 
 # 0. Install dependencies
 ```
@@ -26,6 +53,7 @@ To run KAGAS, go to `KAGAS` and run the following sample code to see the result:
 ```
 python3 parallel_to_m2_korean.py -orig sample_test_data/orig.txt -cor sample_test_data/corrected.txt -out sample_test_data/output.m2 -hunspell ./aff-dic
 ```
+docker image used: `msyoon8/default:gec`
 
 # 1. How to get data
 ## Kor-Lang8
@@ -81,9 +109,8 @@ repository](https://github.com/kimgyu/korean-learner).
 
 # 2. How to run the models
 **Disclaimer**: The original model code was implemented years ago,
-so we implemented a new, easier one that is more easily accessible. (WIP)
+so it may not work well in current CUDA environments. We recommend you build your own model using our dataset, or try it out by our demo page.
 
-We are also planning to open an easy-accessible version of the pre-trained model by our dataset.
 To reproduce the original experiments, please refer to [this spreadsheet](https://docs.google.com/spreadsheets/d/1II_BB10YPijp1Rgw3ZgQElvv6pw7xINOdTpJbAPz484/edit?usp=sharing).
 It contains all the information about model checkpoints(link to google drive), command logs, and so on.
 
@@ -92,6 +119,7 @@ It contains all the information about model checkpoints(link to google drive), c
 If you want to reproduce the original code and train them, please look at the codes under `src/KoBART_GEC`. Please use the docker image `msyoon8/default:gec` to run the original(deprecated) code. Please note that the original code is no longer maintained. Tips: You don't need to install savvihub and g2pk to run the training. (You can just delete the import part and related code)
 
 Kobart transformers are referenced by [this repository](https://github.com/hyunwoongko/kobart-transformers).
+
 ## Prepare dataset
 ### Split into train/test/val, Making union files
 - It would be helpful if you run the `get_data/process_for_train.py` code.
